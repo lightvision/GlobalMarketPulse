@@ -4,16 +4,16 @@
     <item
         android:id="@+id/navigation_market_trends"
         android:icon="@drawable/ic_market_trends"
-        android:title="@string/title_market_trends" />
+        android:title="@string/menu_market_trends" />
 
     <item
         android:id="@+id/navigation_exchange_rates"
         android:icon="@drawable/ic_exchange_rates"
-        android:title="@string/title_exchange_rates" />
+        android:title="@string/menu_exchange_rates" />
 
     <item
         android:id="@+id/navigation_business_news"
         android:icon="@drawable/ic_business_news"
-        android:title="@string/title_business_news" />
+        android:title="@string/menu_business_news" />
 
 </menu>

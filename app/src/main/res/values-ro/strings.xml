@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <resources>
+    <!--    Titlurile fragmentelor -->
     <string name="app_name">Global Market Pulse</string>
-    <string name="title_market_trends">Tendințe de Piață</string>
+    <string name="title_market_trends">Tendințe de Piață Reddit</string>
     <string name="title_exchange_rates">Cursuri Valutare</string>
     <string name="title_business_news">Știri Economice</string>
 
     <!--    Meniul de sus -->
     <string name="menu_settings">Setări</string>
     <string name="menu_exit">Ieșire</string>
+
+    <!--    Meniuri de jos -->
+    <string name="menu_market_trends">Tendințe de Piață</string>
+    <string name="menu_exchange_rates">Cursuri Valutare</string>
+    <string name="menu_business_news">Știri Economice</string>
 
     <!--    Termeni si conditii -->
     <string name="title_terms_conditions">Termeni si Conditii</string>
@@ -30,4 +35,10 @@
     <string name="terms_checkbox">Accept Termenii și Condițiile</string>
     <string name="terms_accept">OK</string>
     <string name="terms_decline">Ieșire</string>
+
+    <!--    Reddit Market Trends -->
+    <string name="ticker">Instrument</string>
+    <string name="sentiment">Sentiment: %1$s</string>
+    <string name="number_of_comments">Număr de comentarii: %1$d</string>
+    <string name="sentiment_score">Scorul sentimentului: %1$s</string>
 </resources>

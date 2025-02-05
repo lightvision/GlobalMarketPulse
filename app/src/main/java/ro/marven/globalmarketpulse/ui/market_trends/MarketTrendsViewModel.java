@@ -24,6 +24,7 @@ package ro.marven.globalmarketpulse.ui.market_trends;
     import okhttp3.Response;
 
     public class MarketTrendsViewModel extends AndroidViewModel {
+        String url = "https://tradestie.com/api/v1/apps/reddit";
 
         private final MutableLiveData<List<MarketTrends>> marketTrendsLiveData;
         private final MutableLiveData<String> errorStateLiveData;
@@ -50,7 +51,6 @@ package ro.marven.globalmarketpulse.ui.market_trends;
             }
 
             OkHttpClient client = new OkHttpClient();
-            String url = "https://tradestie.com/api/v1/apps/reddit";
 
             Log.i("MarketSentimentVM", "Fetching marketing sentiment from Reddit.");
 

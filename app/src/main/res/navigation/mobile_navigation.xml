@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_market_trends">
+
+    <fragment
+        android:id="@+id/navigation_market_trends"
+        android:name="ro.marven.globalmarketpulse.ui.market_trends.MarketTrendsFragment"
+        android:label="@string/title_market_trends"
+        tools:layout="@layout/fragment_market_trends" />
+
+    <fragment
+        android:id="@+id/navigation_exchange_rates"
+        android:name="ro.marven.globalmarketpulse.ui.exchange_rates.ExchangeRatesFragment"
+        android:label="@string/title_exchange_rates"
+        tools:layout="@layout/fragment_exchange_rates" />
+
+    <fragment
+        android:id="@+id/navigation_business_news"
+        android:name="ro.marven.globalmarketpulse.ui.business_news.BusinessNewsFragment"
+        android:label="@string/title_business_news"
+        tools:layout="@layout/fragment_business_news" />
+</navigation>

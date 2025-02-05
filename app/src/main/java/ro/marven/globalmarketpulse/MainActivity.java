@@ -1,5 +1,6 @@
 package ro.marven.globalmarketpulse;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -13,6 +14,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import ro.marven.globalmarketpulse.databinding.ActivityMainBinding;
+import ro.marven.globalmarketpulse.ui.terms_conditions.TermsConditionsDialogFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +27,10 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        // Obtinem preferintele pentru Termeni si Conditii
+        SharedPreferences preferences = getSharedPreferences("app_prefs", 0);
+        boolean termsAccepted = preferences.getBoolean("terms_accepted", false);
+
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -34,6 +40,13 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
+
+        if (!termsAccepted) {
+            TermsConditionsDialogFragment terms=new TermsConditionsDialogFragment();
+            navView.setVisibility(BottomNavigationView.GONE);
+            terms.show(getSupportFragmentManager());
+        }
+        navView.setVisibility(BottomNavigationView.VISIBLE);
     }
 
     @Override

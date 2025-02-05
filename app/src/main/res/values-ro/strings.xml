@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">Global Market Pulse</string>
+    <string name="title_market_trends">Tendințe de Piață</string>
+    <string name="title_exchange_rates">Cursuri Valutare</string>
+    <string name="title_business_news">Știri Economice</string>
+
+    <!--    Meniul de sus -->
+    <string name="menu_settings">Setări</string>
+    <string name="menu_exit">Ieșire</string>
+</resources>

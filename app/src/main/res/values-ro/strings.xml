@@ -9,4 +9,25 @@
     <!--    Meniul de sus -->
     <string name="menu_settings">Setări</string>
     <string name="menu_exit">Ieșire</string>
+
+    <!--    Termeni si conditii -->
+    <string name="title_terms_conditions">Termeni si Conditii</string>
+    <string name="terms_conditions_text">
+        <b><u>IMPORTANT:</u></b>\n\n
+        Te rugăm să citești cu atenție următorii <b>TERMENI ȘI CONDIȚII</b> înainte de a utiliza aplicația.\n
+        \n
+        1. Această aplicație este destinată <b>EXCLUSIV</b> scopurilor educaționale și NU trebuie utilizată pentru luarea unor decizii financiare reale.\n\n
+        2. NU suntem consultanți financiari și NU oferim servicii de consultanță financiară, investițională sau profesională.\n\n
+        3. Datele furnizate în această aplicație sunt doar pentru demonstrație și informare. Acestea pot fi incomplete, depășite sau inexacte.\n\n
+        4. <b>ÎN NICIO CIRCUMSTANȚĂ</b> nu trebuie să folosești această aplicație pentru a lua decizii financiare, a efectua investiții sau tranzacții monetare. Orice astfel de utilizare se face pe propria răspundere.\n\n
+        5. Prin continuarea utilizării, recunoști că:\n\n
+           - Creatorii și dezvoltatorii acestei aplicații NU sunt responsabili pentru eventuale pierderi financiare sau daune suferite.\n
+           - Ai citit și înțeles pe deplin acești termeni și ești de acord să îi respecți.\n
+        \n\n
+        Dacă NU ești de acord cu acești termeni, trebuie să PĂRĂSEȘTI aplicația imediat.
+        \n\n\n
+    </string>
+    <string name="terms_checkbox">Accept Termenii și Condițiile</string>
+    <string name="terms_accept">OK</string>
+    <string name="terms_decline">Ieșire</string>
 </resources>

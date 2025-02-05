@@ -3,4 +3,8 @@
     <string name="title_market_trends">Market Trends</string>
     <string name="title_exchange_rates">Exchange Rates</string>
     <string name="title_business_news">Business News</string>
+
+    <!--    Meniul de sus -->
+    <string name="menu_settings">Settings</string>
+    <string name="menu_exit">Exit</string>
 </resources>

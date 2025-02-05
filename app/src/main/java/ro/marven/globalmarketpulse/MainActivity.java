@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -24,12 +25,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // fortam in timpul dezvoltarii ca aplicatia sa aiba o tema light sau tema dark
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        // Obtinem preferintele pentru Termeni si Conditii
-        SharedPreferences preferences = getSharedPreferences("app_prefs", 0);
-        boolean termsAccepted = preferences.getBoolean("terms_accepted", false);
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -40,6 +41,11 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
+
+
+        // Obtinem preferintele pentru Termeni si Conditii
+        SharedPreferences preferences = getSharedPreferences("app_prefs", 0);
+        boolean termsAccepted = preferences.getBoolean("terms_accepted", false);
 
         if (!termsAccepted) {
             TermsConditionsDialogFragment terms=new TermsConditionsDialogFragment();

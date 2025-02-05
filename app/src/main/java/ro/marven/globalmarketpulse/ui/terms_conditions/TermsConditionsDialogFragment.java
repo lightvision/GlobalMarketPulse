@@ -79,14 +79,14 @@ public class TermsConditionsDialogFragment extends DialogFragment {
     }
 
 
-    public void show(FragmentManager fragmentManager){
-//        FragmentManager fragmentManager = getSupportFragmentManager();
-        TermsConditionsDialogFragment newFragment = new TermsConditionsDialogFragment();
-
-        FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-        transaction.add(android.R.id.content, newFragment)
-                .addToBackStack(null).commit();
+    public void show(FragmentManager fragmentManager) {
+        if (fragmentManager.findFragmentByTag("TermsConditionsDialog") == null) {
+            TermsConditionsDialogFragment newFragment = new TermsConditionsDialogFragment();
+            FragmentTransaction transaction = fragmentManager.beginTransaction();
+            transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+            transaction.add(android.R.id.content, newFragment, "TermsConditionsDialog")
+                       .addToBackStack(null).commit();
+        }
     }
 
     private void saveAcceptTerms(){
